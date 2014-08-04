@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+<!--     <TextView -->
+<!--         android:id="@+id/textView1" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_alignParentLeft="true" -->
+<!--         android:layout_alignParentTop="true" -->
+<!--         android:layout_marginLeft="19dp" -->
+<!--         android:layout_marginTop="24dp" -->
+<!--         android:text="Your Email: " -->
+<!--         android:textAppearance="?android:attr/textAppearanceLarge" /> -->
+
+<!--     <EditText -->
+<!--         android:id="@+id/editText1" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_alignBaseline="@+id/textView1" -->
+<!--         android:layout_alignBottom="@+id/textView1" -->
+<!--         android:layout_toRightOf="@+id/textView1" -->
+<!--         android:ems="10" -->
+<!-- 		android:hint="Email" -->
+<!--         android:inputType="textEmailAddress" > -->
+        
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/banner_forgot_pwd" />
+        
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:ems="15"
+		android:hint="Email Address"
+        android:layout_marginTop="8dp"		
+        android:layout_marginLeft="8dp"        
+        android:layout_marginRight="8dp"        
+        android:inputType="textEmailAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"        
+        android:background="#00000000"
+        android:src="@drawable/ant_o_send_me_instr" />
+
+</RelativeLayout>

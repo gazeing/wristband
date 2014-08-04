@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView_antobanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/banner_read_info_top_settings" />
+
+        <Button
+            android:id="@+id/button_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView_antobanner"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/imageView_antobanner"
+            android:background="@color/transparent"
+            android:text="               " />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+		android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/textView_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/imageView_tagPortrait"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:id="@+id/imageView_tagPortrait"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/default_user" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_contactbanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative1"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/banner_read_info_details_edit" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.04"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/read_information_det_info_bg2" >
+
+        <RelativeLayout
+            android:id="@+id/relative2"
+        	android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+             >
+
+            <TextView
+                android:id="@+id/textView_contactNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/label_font" />
+
+            <TextView
+                android:id="@+id/textView_contactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_contactNameLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView_contactNumLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_contactName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Phone"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/label_font" />
+
+            <TextView
+                android:id="@+id/textView_contactNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_contactNumLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView_infoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_contactNum"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Additional Information"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/label_font" />
+
+            <TextView
+                android:id="@+id/editText_addtionInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_infoLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relative3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_tagAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/ant_o_send_bt"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView_tagdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_tagAction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/label_font" />
+    </RelativeLayout>
+
+</LinearLayout>

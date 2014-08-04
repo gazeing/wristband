@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ant_o_red_bkg" 
+     android:padding="0dip">
+
+<!--     <EditText -->
+<!--         android:id="@+id/editText_pwdRepeat" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_above="@+id/button_register" -->
+<!--         android:layout_centerHorizontal="true" -->
+<!--         android:layout_marginBottom="15dp" -->
+<!--         android:background="@drawable/edittext_bg" -->
+<!--         android:ems="11" -->
+<!--         android:hint="Repeat password" -->
+<!--         android:textColor="@color/anto_red" -->
+<!--         android:textStyle="bold" -->
+<!--         android:inputType="textPassword" > -->
+
+<!--         <requestFocus /> -->
+<!--     </EditText> -->
+
+    <EditText
+        android:id="@+id/editText_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_register"
+        android:layout_alignLeft="@+id/editText_email"
+        android:layout_alignRight="@+id/editText_email"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="15"
+        android:hint="Password"
+        
+        android:inputType="textPassword"
+        android:textColor="@color/anto_red"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText_pwd"
+        android:layout_alignLeft="@+id/editText_surname"
+        android:layout_alignRight="@+id/editText_surname"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="15"
+        android:maxLength="255"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/anto_red"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText_email"
+        android:layout_alignLeft="@+id/editText_name"
+        android:layout_alignRight="@+id/editText_name"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="15"
+        android:maxLength="15"
+        android:hint="Last Name"
+        android:inputType="textCapSentences"
+        android:textColor="@color/anto_red"
+        android:textStyle="bold" />
+
+<!--         android:inputType="textPersonName"      -->
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText_surname"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/edittext_bg"
+        android:hint="Name"
+        android:maxLength="15"
+        android:inputType="textCapSentences"
+        android:textColor="@color/anto_red"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ant_o_registration_logo_top" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bt_signin" />
+    
+	<ImageView
+   		android:id="@+id/antcorp_logo_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:src="@drawable/ant_o_antcorp_small_logo"
+		android:maxHeight="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+    
+
+</RelativeLayout>

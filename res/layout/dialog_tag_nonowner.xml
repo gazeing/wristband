@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+     <ImageView
+       android:id="@+id/imageView_antobanner"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="0dp"
+       android:src="@drawable/banner_read_info_top_settings" />
+    
+
+
+    <TextView
+        android:id="@+id/textView_tagInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_noThanks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="@color/label_font" />
+
+    <ImageView
+        android:id="@+id/imageView_tagPortrait_dialog"
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_below="@+id/imageView_antobanner"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/type_wb_1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_tagPortrait_dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Ant-O Energy Band"
+        android:textColor="@color/label_font"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+   
+    <EditText
+        android:id="@+id/editText_wbname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:ems="10" 
+        android:maxLength="20"
+        android:background="@drawable/edittext_bg"
+        android:hint="Band's Name"
+        android:textColor="@color/anto_red"
+        android:textStyle="bold"
+        android:inputType="textCapSentences">
+
+        
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/button_addToBag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText_wbname"
+        android:layout_marginTop="12dp"
+		android:layout_centerHorizontal="true"
+		android:background="#80000000"
+        android:src="@drawable/add_to_bag_bt"/>
+
+    <ImageButton
+        android:id="@+id/button_noThanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_addToBag"
+        android:layout_alignBottom="@+id/button_addToBag"
+        android:layout_alignParentRight="true"
+		android:layout_centerHorizontal="true"
+		android:visibility="invisible"
+		android:background="#80000000"
+
+        />
+<!--         android:src="@drawable/later_to_my_bag" -->
+
+    <Button
+        android:id="@+id/button_menu"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="" 
+        android:background="@color/transparent"/>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ant-O</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+        <string-array name="species_array">
+        <item>"List 1"</item>
+        <item>"List 2"</item>
+ 
+    </string-array>
+
+</resources>

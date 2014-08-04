@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+    >
+
+    <ImageView
+        android:id="@+id/imageView_icon"
+      	android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/default_user" />
+    
+	<TextView
+        android:id="@+id/textView_aboutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView_icon"
+        android:layout_alignTop="@+id/imageView_icon"
+        android:layout_marginLeft="3dp"
+        android:text="About:"
+        android:textColor="@color/anto_red"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+          
+	<TextView
+        android:id="@+id/textView_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_aboutLabel"
+        android:layout_toLeftOf="@+id/imageView_nav"
+        android:layout_toRightOf="@+id/textView_aboutLabel"
+        android:layout_marginLeft="3dp"
+        android:text=""
+        android:textColor="@color/label_font"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+   	<TextView
+        android:id="@+id/textView_nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignBaseline="@+id/textView_name"
+        android:layout_toRightOf="@+id/imageView_icon"
+        android:layout_marginLeft="3dp"
+        android:text="From:  "
+        android:textColor="@color/anto_red"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_about"
+        android:layout_toLeftOf="@+id/imageView_nav"
+        android:layout_toRightOf="@+id/textView_nameLabel"
+        android:layout_marginLeft="3dp"
+        android:text=""
+        android:textColor="@color/label_font"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    
+
+
+    <TextView
+        android:id="@+id/textView_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView_aboutLabel"
+        android:layout_below="@+id/textView_name"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/imageView_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/go_to_notification" />
+
+</RelativeLayout>

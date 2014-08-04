@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.antcorp.anto"
+    android:versionCode="10"
+    android:versionName="1.6" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <permission
+        android:name="com.wires.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.wires.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <!-- End of copy. -->
+
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- My Location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+   <uses-permission android:name="android.permission.VIBRATE" />   
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>	
+
+    <!-- GCM service -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Prevent other Android applications from registering and receiving the Android application's messages. -->
+    <permission
+        android:name="com.antcorp.anto.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.antcorp.anto.permission.C2D_MESSAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <application
+        android:name="com.antcorp.anto.AntCorpApplication"
+	
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.antcorp.anto.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/com.antcorp.anto" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.antcorp.anto.SplashLoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.MainActivity"
+            android:label="@string/app_name"
+            
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.LoginBaseActivity"
+            android:label="@string/app_name"
+            
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.RegisterTagActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.TagInfoActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.AddToBagActivity"
+            android:label="@string/app_name"
+            
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.EditTagActivity"
+            android:label="@string/app_name"
+            
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.EditTagFromRegiActivity"
+            android:label="@string/app_name"
+            
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.ChatActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.antcorp.anto.FullMapActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.antcorp.anto.nfc.NFCBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/com.antcorp.anto" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- A receiver for com.google.android.c2dm.intent.RECEIVE, with the category set as applicationPackage. The receiver should require the com.google.android.c2dm.SEND permission, so that only the GCM Framework can send a message to it. If your app uses an IntentService (not required, but a common pattern), this receiver should be an instance of WakefulBroadcastReceiver. A WakefulBroadcastReceiver takes care of creating and managing a partial wake lock for your app. -->
+        <receiver
+            android:name="com.antcorp.anto.gcm.GcmBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- <action android:name="com.google.android.c2dm.intent.REGISTRATION" /> -->
+
+                <category android:name="com.antcorp.anto" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.antcorp.anto.gcm.GcmIntentService"
+            android:enabled="true" />
+        <service
+            android:name="com.antcorp.anto.service.AntNotificationService"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB8yR_THxuEAijGmsngtryR6C7wzSkDNGg" />
+
+        <!-- this is for GCM service -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

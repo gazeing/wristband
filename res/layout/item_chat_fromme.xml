@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_outside"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="3sp"
+   
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="5dp"
+		android:layout_marginRight="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="0dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:background="@drawable/chat_left_bubble"
+            android:textColor="@color/anto_red" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_name"
+        android:layout_alignBottom="@+id/textView_name"
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@+id/textView_name"
+        android:layout_marginTop="-3dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/anto_red" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:text=""
+        android:layout_marginTop="-3dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/anto_red" />
+
+</RelativeLayout>

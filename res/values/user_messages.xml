@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="invalid_password">The password are not matching</string>
+    <string name="invalid_email">The email format is not valid</string>
+    <string name="password_min_size">Password requires at least 8 digits</string>
+    <string name="required_field"> is required</string>
+    <string name="connection_field">Connection is failed, please check your Internet connection</string>
+     <string name="id_not_found">Ant-O ID could not be found.</string>
+     <string name="server_error">Ant-O Server did not respond. Please try again later.</string>
+
+    
+   <string name="chat_limit">You have reached the limit of messages chat</string>
+   <string name="chat_empty">Your message is empty</string>
+   <string name="send_msg_fail">Your message could not be delivered. Please try again later</string>
+   <string name="remove_chat_fail">Chat could not be removed. Please try again later</string>
+   <string name="close_chat_fail">Chat could not be closed. Please try again later</string>
+
+   <string name="delete_own_contact_fail">Your contact cannot be removed.</string>
+   <string name="not_image_capture_support">Your device does not support capturing images</string>
+   <string name="save_picture_fail">Picture could not be saved. Please try again later</string>
+   <string name="image_crop_app_fail">Could not find any image crop application on this device</string>
+   <string name="delete_fail">Could not delete it. Please try again later</string>
+   <string name="edit_fail">Could not edit it. Please try again later</string>
+
+   <string name="usr_pwd_not_match">The username or password is not correct. Did you forget your password? Please, check the menu options</string>
+   <string name="email_already_registered">Email already registered</string>
+
+	<string name="send_notify_fail">Notification could not be sent. Please try again later</string>
+	
+	<string name="nfc_required">NFC is required</string>
+
+	<string name="add_to_my_bag_fail">Could not add to my bag. Please try again later</string>
+	<string name="rename_item_fail">Could not rename the item. Please try again later</string>
+	<string name="remove_all_msg_fail">Could not remove all messages. Please try again later</string>	
+	
+	<string name="recovery_pw">Please check your email account</string>
+	<string name="recovery_pw_fail">Email not registered in Ant-O</string>
+	
+</resources>

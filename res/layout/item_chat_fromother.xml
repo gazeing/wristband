@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_outside"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="3sp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+	    android:layout_marginLeft="15dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="0dp"
+            android:text=""
+			android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:background="@drawable/chat_right_bubble"
+            android:textColor="@color/anto_red" 
+            android:gravity="right"
+            />
+
+    </RelativeLayout>
+
+<!--     <ImageView
+        android:id="@+id/imageView_protrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/relativeLayout1"
+        android:layout_below="@+id/relativeLayout1"
+        android:src="@drawable/active_on" /> -->
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/textView_time"
+        android:text=""
+        android:layout_marginTop="-3dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/anto_red" />
+
+    <TextView
+        android:id="@+id/textView_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView_name"
+        android:layout_alignBottom="@+id/textView_name"
+        android:layout_alignParentRight="true"
+        android:text=""
+        android:layout_marginTop="-3dp"
+        android:layout_marginRight="13dp"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/anto_red" />
+
+</RelativeLayout>
